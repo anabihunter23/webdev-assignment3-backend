@@ -23,7 +23,28 @@ const seedDB = async () => {
     completion: "Not Complete",
   });
 
+  const dummyTask2 = await Task.create({
+    description: "Grade Student's Final Exams",
+    priority: 2,
+    completion: "Not Complete",
+  });
+
+  const dummyTask3 = await Task.create({
+    description: "Organize a Dolciani Tutoring Session",
+    priority: 1,
+    completion: "Not Complete",
+  });
+
+  const dummyTask4 = await Task.create({
+    description: "Organize a Hackathon",
+    priority: 1,
+    completion: "Not Complete",
+  });
+
   await dummyTask.setEmployee(dummyEmployee);
+  await dummyTask2.setEmployee(dummyEmployee2);
+  await dummyTask3.setEmployee(dummyEmployee3);
+  await dummyTask4.setEmployee(dummyEmployee2);
 };
 
 module.exports = seedDB;
